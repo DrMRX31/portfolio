@@ -140,7 +140,7 @@ const PORTFOLIO_DATA = {
     {
       role: "Chefe de Divisão de Imprensa",
       company: "Prefeitura de Rio do Sul",
-      period: "2020",
+      period: "2019",
       location: "Rio do Sul, SC",
       description: "Coordenação da produção de materiais publicitários, peças institucionais e coberturas audiovisuais oficiais para a Prefeitura e suas respectivas Secretarias. Planejamento de campanhas de utilidade pública e documentação de eventos governamentais de grande escala."
     },
