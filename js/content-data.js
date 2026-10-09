@@ -111,7 +111,7 @@ const PORTFOLIO_DATA = {
   // -------------------------------------------------------------
   languages: [
     { language: "Português", level: "Nativo", badge: "Língua Materna", icon: "ph-translate" },
-    { language: "Inglês", level: "B2 Fluente", badge: "Comunicação Internacional", icon: "ph-globe-hemisphere-west" }
+    { language: "Inglês", level: "B2 - Fluente", badge: "Comunicação Internacional", icon: "ph-globe-hemisphere-west" }
   ],
 
   // -------------------------------------------------------------
@@ -134,7 +134,7 @@ const PORTFOLIO_DATA = {
       role: "Diretor de Arte e Fotografia",
       company: "Hashtag Comunicação",
       period: "2021",
-      location: "Brasil",
+      location: "Rio do Sul, SC",
       description: "Liderança integral de todo o processo criativo e visual da agência para as marcas atendidas. Gestão executiva de projetos, direção de fotografia em estúdio e externa, confecção de peças multimídia e concepção estética de campanhas de tráfego pago de alta performance."
     },
     {
@@ -148,7 +148,7 @@ const PORTFOLIO_DATA = {
       role: "Produtor Multimídia",
       company: "Reale Engenharia",
       period: "2019",
-      location: "Brasil",
+      location: "Rio do Sul, SC",
       description: "Captação, direção e edição técnica de materiais para cursos online, planejamento de conteúdo dinâmico para mídias sociais e elaboração de estratégias audiovisuais para fortalecimento de autoridade da marca."
     },
     {
@@ -167,7 +167,7 @@ const PORTFOLIO_DATA = {
     {
       degree: "Produção Multimídia",
       institution: "UNIDAVI – Centro Universitário para o Desenvolvimento do Alto Vale do Itajaí",
-      period: "Graduação Superior",
+      period: "Graduação Superior - Não finalizada",
       description: "Formação acadêmica integrada com ênfase em direção criativa, processos de captação e edição audiovisual, fotografia publicitária, narrativas transmídia e design digital contemporâneo."
     }
   ],
