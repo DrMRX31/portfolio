@@ -27,26 +27,22 @@ const PORTFOLIO_DATA = {
     status: "Disponível para novos projetos e produções",
     // Se quiser colocar uma foto sua de perfil no "Sobre Mim", coloque o caminho aqui:
     // ex: "assets/images/christian-ferrari-perfil.jpg". Se deixar vazio ou nulo, exibirá o monograma estilizado "CF".
-    avatarUrl: "",
+    avatarUrl: "assets/images/pfp.webp",
     
     // Bio apresentada na página Sobre Mim
     bio: "Produtor Multimídia focado em transformar conceitos criativos em narrativas visuais com atmosfera cinematográfica e acabamento refinado. Com domínio de todas as fases da cadeia produtiva — desde a concepção de roteiro, direção de arte e captação até a montagem rítmica, pós-produção avançada, color grading e sound design —, meu objetivo é criar obras que impactem o público e elevem marcas a outro nível.",
     
     // Contato direto
-    email: "contato.christianferrari@gmail.com",
-    whatsapp: "+55 (11) 99999-9999", // Coloque seu número aqui
-    whatsappLink: "https://wa.me/5511999999999", // Link direto para conversa
+    email: "christianferrari61@gmail.com",
+    whatsapp: "+55 (47) 99280-8271", // Coloque seu número aqui
+    whatsappLink: "https://wa.me/5547992808271", // Link direto para conversa
     
     // Link para download do currículo ou deck de apresentação (PDF)
     resumePdfUrl: "#", 
     
     // Redes Sociais e Perfis Profissionais
     socials: [
-      { name: "Instagram", icon: "ph-instagram-logo", url: "https://instagram.com" },
-      { name: "Behance", icon: "ph-behance-logo", url: "https://behance.net" },
-      { name: "Vimeo", icon: "ph-video", url: "https://vimeo.com" },
-      { name: "YouTube", icon: "ph-youtube-logo", url: "https://youtube.com" },
-      { name: "LinkedIn", icon: "ph-linkedin-logo", url: "https://linkedin.com" }
+      { name: "Instagram", icon: "ph-instagram-logo", url: "https://www.instagram.com/cferraari_/" },
     ]
   },
 
@@ -110,8 +106,6 @@ const PORTFOLIO_DATA = {
     { name: "Adobe Photoshop", role: "Tratamento & Manipulação", icon: "ph-image", level: "Especialista" },
     { name: "Adobe Lightroom", role: "Tratamento RAW & Cores", icon: "ph-aperture", level: "Especialista" },
     { name: "Adobe Illustrator", role: "Vetores & Identidade Visual", icon: "ph-vector-three", level: "Intermediário" },
-    { name: "Blender / Cinema 4D", role: "3D, Shading & Composição", icon: "ph-cube", level: "Intermediário" },
-    { name: "Figma", role: "Protótipos & Layouts Visuais", icon: "ph-layout", level: "Intermediário" }
   ],
 
   // -------------------------------------------------------------
