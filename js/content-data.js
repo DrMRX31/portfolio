@@ -30,7 +30,7 @@ const PORTFOLIO_DATA = {
     avatarUrl: "assets/images/pfp.webp",
     
     // Bio apresentada na página Sobre Mim
-    bio: "Produtor Multimídia focado em transformar conceitos criativos em narrativas visuais com atmosfera cinematográfica e acabamento refinado. Com domínio de todas as fases da cadeia produtiva — desde a concepção de roteiro, direção de arte e captação até a montagem rítmica, pós-produção avançada, color grading e sound design —, meu objetivo é criar obras que impactem o público e elevem marcas a outro nível.",
+    bio: "Com trajetória consolidada na produção publicitária e audiovisual iniciada aos 16 anos, desenvolvi sólido domínio técnico sobre as principais plataformas, fluxos de captação e ferramentas criativas do mercado. Atuando como freelancer especializado em redes sociais, produção audiovisual e fotografia de alto padrão, uno narrativa estratégica, ritmo dinâmico e estética refinada para transformar ideias em experiências visuais memoráveis e resultados expressivos para marcas e clientes.",
     
     // Contato direto
     email: "christianferrari61@gmail.com",
@@ -96,12 +96,30 @@ const PORTFOLIO_DATA = {
   ],
 
   // -------------------------------------------------------------
+  // HABILIDADES INTERPESSOAIS (SOFT SKILLS)
+  // -------------------------------------------------------------
+  softSkills: [
+    { name: "Comunicação Estratégica", icon: "ph-chats-circle", desc: "Alinhamento preciso de briefing, clareza na apresentação de conceitos criativos e relacionamento empático." },
+    { name: "Criatividade & Pensamento Visual", icon: "ph-sparkle", desc: "Desenvolvimento de conceitos originais, soluções estéticas de vanguarda e apelo contemporâneo." },
+    { name: "Liderança de Projetos", icon: "ph-crown", desc: "Gestão executiva de equipes criativas, direção de set e supervisão rigorosa de qualidade técnica." },
+    { name: "Trabalho em Equipe", icon: "ph-users-three", desc: "Integração multidisciplinar fluida com agências, diretores de arte e núcleos de marketing." },
+    { name: "Organização & Gestão de Prazos", icon: "ph-calendar-check", desc: "Planejamento estruturado de cronogramas, rigor em entregas críticas e gestão de acervos." }
+  ],
+
+  // -------------------------------------------------------------
+  // IDIOMAS
+  // -------------------------------------------------------------
+  languages: [
+    { language: "Português", level: "Nativo", badge: "Língua Materna", icon: "ph-translate" },
+    { language: "Inglês", level: "B2 Fluente", badge: "Comunicação Internacional", icon: "ph-globe-hemisphere-west" }
+  ],
+
+  // -------------------------------------------------------------
   // FERRAMENTAS & SOFTWARES (SOBRE MIM)
-  // Ícones e ferramentas que você domina
   // -------------------------------------------------------------
   tools: [
     { name: "Adobe Premiere Pro", role: "Edição & Montagem", icon: "ph-film-strip", level: "Avançado" },
-    { name: "DaVinci Resolve", role: "Color Grading & Áudio Fairlight", icon: "ph-palette", level: "Avançado" },
+    { name: "DaVinci Resolve", role: "Color Grading & Pós-Produção", icon: "ph-palette", level: "Avançado" },
     { name: "Adobe After Effects", role: "Motion Design & VFX", icon: "ph-magic-wand", level: "Avançado" },
     { name: "Adobe Photoshop", role: "Tratamento & Manipulação", icon: "ph-image", level: "Especialista" },
     { name: "Adobe Lightroom", role: "Tratamento RAW & Cores", icon: "ph-aperture", level: "Especialista" },
@@ -110,29 +128,35 @@ const PORTFOLIO_DATA = {
 
   // -------------------------------------------------------------
   // EXPERIÊNCIA PROFISSIONAL / LUGARES QUE TRABALHOU (SOBRE MIM)
-  // Preencha ou modifique a ordem e os dados das empresas
   // -------------------------------------------------------------
   experiences: [
     {
-      role: "Produtor Multimídia Sênior / Diretor Criativo",
-      company: "Studio Criativo & Produções Audiovisuais",
-      period: "2023 — Presente",
-      location: "São Paulo, SP",
-      description: "Liderança de produções audiovisuais completas para marcas e campanhas publicitárias. Direção de cena, coordenação de equipe de captação, montagem dos cortes principais e supervisão de color grading e masterização final."
-    },
-    {
-      role: "Editor de Vídeo & Colorista",
-      company: "Produtora Audiovisual & Cinema Independente",
-      period: "2021 — 2023",
-      location: "Remoto / Híbrido",
-      description: "Edição de videoclipes, campanhas institucionais e comerciais de TV/web. Tratamento de cor nos padrões Rec.709 e DCI-P3 no DaVinci Resolve, além de criação de vinhetas em Motion Graphics."
-    },
-    {
-      role: "Fotógrafo & Designer Multimídia",
-      company: "Agência de Publicidade & Conteúdo Digital",
-      period: "2019 — 2021",
+      role: "Diretor de Arte e Fotografia",
+      company: "Hashtag Comunicação",
+      period: "2021",
       location: "Brasil",
-      description: "Produção de fotos de produtos (still), retratos corporativos, cobertura de eventos de grande porte e pós-produção minuciosa com retoque de pele de alta frequência e composição visual."
+      description: "Liderança integral de todo o processo criativo e visual da agência para as marcas atendidas. Gestão executiva de projetos, direção de fotografia em estúdio e externa, confecção de peças multimídia e concepção estética de campanhas de tráfego pago de alta performance."
+    },
+    {
+      role: "Chefe de Divisão de Imprensa",
+      company: "Prefeitura de Rio do Sul",
+      period: "2020",
+      location: "Rio do Sul, SC",
+      description: "Coordenação da produção de materiais publicitários, peças institucionais e coberturas audiovisuais oficiais para a Prefeitura e suas respectivas Secretarias. Planejamento de campanhas de utilidade pública e documentação de eventos governamentais de grande escala."
+    },
+    {
+      role: "Produtor Multimídia",
+      company: "Reale Engenharia",
+      period: "2019",
+      location: "Brasil",
+      description: "Captação, direção e edição técnica de materiais para cursos online, planejamento de conteúdo dinâmico para mídias sociais e elaboração de estratégias audiovisuais para fortalecimento de autoridade da marca."
+    },
+    {
+      role: "Produtor Comercial e Jornalístico",
+      company: "Rede Bela Aliança de Televisão (RBATV)",
+      period: "2016",
+      location: "Rio do Sul, SC",
+      description: "Início da carreira na radiodifusão televisiva. Edição ágil de matérias para os telejornais diários e, posteriormente, produção executiva de comerciais publicitários, controle técnico de exibição e produção de programas da grade da emissora."
     }
   ],
 
@@ -141,28 +165,10 @@ const PORTFOLIO_DATA = {
   // -------------------------------------------------------------
   educations: [
     {
-      degree: "Bacharelado em Produção Multimídia / Audiovisual",
-      institution: "Universidade / Faculdade de Comunicação",
-      period: "Concluído",
-      description: "Fundamentos de cinema, direção de fotografia, estética da imagem, roteirização, semiótica e comunicação transmídia."
-    },
-    {
-      degree: "Masterclass de Color Grading Profissional",
-      institution: "Academia de Pós-Produção Audiovisual",
-      period: "Certificação Internacional",
-      description: "Especialização em DaVinci Resolve Studio, ciência de cores, fluxo ACES, calibração e emulação analógica de película cinematográfica (35mm / 16mm)."
-    },
-    {
-      degree: "Especialização em Motion Design & Animação 2D/3D",
-      institution: "Escola de Artes Visuais Digitais",
-      period: "Certificação Avançada",
-      description: "Princípios clássicos de animação aplicados a branding dinâmico, expressões em After Effects e integração 3D."
-    },
-    {
-      degree: "Workshop Avançado de Iluminação Cinematográfica",
-      institution: "Instituto de Cinema",
-      period: "Certificação Prática",
-      description: "Técnicas de iluminação de set, controle de contraste, uso de difusores, modificadores de luz e operação de câmeras de cinema digital."
+      degree: "Produção Multimídia",
+      institution: "UNIDAVI – Centro Universitário para o Desenvolvimento do Alto Vale do Itajaí",
+      period: "Graduação Superior",
+      description: "Formação acadêmica integrada com ênfase em direção criativa, processos de captação e edição audiovisual, fotografia publicitária, narrativas transmídia e design digital contemporâneo."
     }
   ],
 

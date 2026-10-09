@@ -404,6 +404,8 @@ const AboutView = {
     this.renderTools();
     this.renderExperiences();
     this.renderEducations();
+    this.renderSoftSkills();
+    this.renderLanguages();
     this.bindEvents();
   },
 
@@ -527,6 +529,43 @@ const AboutView = {
         <div class="edu-institution">${edu.institution}</div>
         <span class="edu-period-tag">${edu.period}</span>
         <p class="edu-desc">${edu.description}</p>
+      </div>
+    `).join('');
+  },
+
+  renderSoftSkills() {
+    const container = document.getElementById('softSkillsContainer');
+    if (!container || !PORTFOLIO_DATA.softSkills) return;
+
+    container.innerHTML = PORTFOLIO_DATA.softSkills.map(skill => `
+      <div class="soft-skill-card glass-card spotlight-card">
+        <div class="soft-skill-icon-wrap">
+          <i class="ph ${skill.icon || 'ph-sparkle'}"></i>
+        </div>
+        <div class="soft-skill-details">
+          <h4 class="soft-skill-name">${skill.name}</h4>
+          <p class="soft-skill-desc">${skill.desc}</p>
+        </div>
+      </div>
+    `).join('');
+  },
+
+  renderLanguages() {
+    const container = document.getElementById('languagesContainer');
+    if (!container || !PORTFOLIO_DATA.languages) return;
+
+    container.innerHTML = PORTFOLIO_DATA.languages.map(lang => `
+      <div class="language-card glass-card spotlight-card">
+        <div class="language-icon-wrap">
+          <i class="ph ${lang.icon || 'ph-translate'}"></i>
+        </div>
+        <div class="language-details">
+          <div class="language-header-row">
+            <h4 class="language-name">${lang.language}</h4>
+            <span class="language-badge">${lang.level}</span>
+          </div>
+          <span class="language-status">${lang.badge}</span>
+        </div>
       </div>
     `).join('');
   }

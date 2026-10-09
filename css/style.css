@@ -1400,6 +1400,112 @@ h1, h2, h3, h4 {
   line-height: 1.5;
 }
 
+/* Soft Skills (Habilidades Interpessoais) */
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.soft-skill-card {
+  padding: 22px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.soft-skill-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: #0f172a;
+  flex-shrink: 0;
+}
+
+.soft-skill-details {
+  flex-grow: 1;
+}
+
+.soft-skill-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+.soft-skill-desc {
+  font-size: 0.85rem;
+  color: var(--silver-mid);
+  line-height: 1.45;
+}
+
+/* Idiomas */
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.language-card {
+  padding: 22px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background: rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #0f172a;
+  flex-shrink: 0;
+}
+
+.language-details {
+  flex-grow: 1;
+}
+
+.language-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.language-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.language-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+}
+
+.language-status {
+  font-size: 0.84rem;
+  color: var(--silver-dark);
+}
+
 /* --------------------------------------------------------------------------
    12. CONTATO VIEW
    -------------------------------------------------------------------------- */
@@ -1860,7 +1966,9 @@ h1, h2, h3, h4 {
   .services-grid,
   .portfolio-items-grid,
   .skills-sliders-grid,
-  .education-grid {
+  .education-grid,
+  .soft-skills-grid,
+  .languages-grid {
     grid-template-columns: 1fr;
   }
   .tools-grid {
