@@ -167,22 +167,26 @@ const HomeView = {
       // Ícone e badge do tipo de mídia
       let mediaIcon = 'ph-image';
       let playTriggerIcon = 'ph-arrows-out-simple';
+      let mediaElementHtml = '';
+
       if (project.category === 'video') {
         mediaIcon = 'ph-video-camera';
         playTriggerIcon = 'ph-play-fill';
-      } else if (project.category === 'foto') {
-        mediaIcon = 'ph-camera';
+        mediaElementHtml = `
+          <video src="${project.mediaUrl}" muted playsinline loop preload="metadata" class="featured-card-img featured-card-video"></video>
+        `;
+      } else {
+        if (project.category === 'foto') {
+          mediaIcon = 'ph-camera';
+        }
+        mediaElementHtml = `
+          <img src="${project.mediaUrl}" alt="Portfólio" class="featured-card-img" loading="lazy">
+        `;
       }
-
-      // Tags de ferramentas
-      const tagsHtml = (project.tools || [])
-        .slice(0, 3)
-        .map(tool => `<span class="tag-pill">${tool}</span>`)
-        .join('');
 
       card.innerHTML = `
         <div class="featured-card-thumb-wrap">
-          <img src="${project.thumbnail}" alt="${project.title}" class="featured-card-img" loading="lazy">
+          ${mediaElementHtml}
           <div class="featured-card-overlay"></div>
         </div>
 
@@ -191,19 +195,19 @@ const HomeView = {
           <span>${project.categoryLabel || project.category}</span>
         </div>
 
-        <div class="featured-card-play-trigger" title="Visualizar projeto">
+        <div class="featured-card-play-trigger" title="Visualizar em tela cheia">
           <i class="ph ${playTriggerIcon}"></i>
         </div>
-
-        <div class="featured-card-content">
-          <div class="featured-card-category">${project.client || 'Destaque'} &bull; ${project.year}</div>
-          <h3 class="featured-card-title">${project.title}</h3>
-          <p class="featured-card-desc">${project.description}</p>
-          <div class="featured-card-tags">
-            ${tagsHtml}
-          </div>
-        </div>
       `;
+
+      // Preview dinâmico para vídeos no hover
+      if (project.category === 'video') {
+        const vid = card.querySelector('video');
+        if (vid) {
+          card.addEventListener('mouseenter', () => { vid.play().catch(() => {}); });
+          card.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+        }
+      }
 
       // Clique abre o modal
       card.addEventListener('click', () => {
@@ -338,21 +342,26 @@ const PortfolioView = {
 
       let mediaIcon = 'ph-image';
       let actionIcon = 'ph-arrows-out-simple';
+      let mediaElementHtml = '';
+
       if (project.category === 'video') {
         mediaIcon = 'ph-video-camera';
         actionIcon = 'ph-play-fill';
-      } else if (project.category === 'foto') {
-        mediaIcon = 'ph-camera';
+        mediaElementHtml = `
+          <video src="${project.mediaUrl}" muted playsinline loop preload="metadata" class="portfolio-card-img portfolio-card-video"></video>
+        `;
+      } else {
+        if (project.category === 'foto') {
+          mediaIcon = 'ph-camera';
+        }
+        mediaElementHtml = `
+          <img src="${project.mediaUrl}" alt="Portfólio" class="portfolio-card-img" loading="lazy">
+        `;
       }
-
-      const toolsHtml = (project.tools || [])
-        .slice(0, 3)
-        .map(t => `<span class="tool-tag">${t}</span>`)
-        .join('');
 
       card.innerHTML = `
         <div class="portfolio-card-media">
-          <img src="${project.thumbnail}" alt="${project.title}" class="portfolio-card-img" loading="lazy">
+          ${mediaElementHtml}
           
           <div class="portfolio-media-badge glass-pill">
             <i class="ph ${mediaIcon}"></i>
@@ -365,19 +374,16 @@ const PortfolioView = {
             </div>
           </div>
         </div>
-
-        <div class="portfolio-card-body">
-          <div class="portfolio-meta-row">
-            <span class="portfolio-cat-label">${project.client || 'Projeto'}</span>
-            <span class="portfolio-year">${project.year}</span>
-          </div>
-          <h3 class="portfolio-title">${project.title}</h3>
-          <p class="portfolio-desc-snippet">${project.description}</p>
-          <div class="portfolio-tools-list">
-            ${toolsHtml}
-          </div>
-        </div>
       `;
+
+      // Preview dinâmico para vídeos no hover
+      if (project.category === 'video') {
+        const vid = card.querySelector('video');
+        if (vid) {
+          card.addEventListener('mouseenter', () => { vid.play().catch(() => {}); });
+          card.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+        }
+      }
 
       card.addEventListener('click', () => {
         MediaModal.open(project.id);
@@ -654,30 +660,8 @@ const MediaModal = {
     const toolsUsed = document.getElementById('modalToolsUsed');
     const actionsGroup = document.getElementById('modalActionsGroup');
 
-    // Preenche informações textuais
+    // Preenche informações da categoria
     if (tag) tag.textContent = project.categoryLabel || project.category;
-    if (title) title.textContent = project.title;
-    if (date) date.textContent = `${project.client ? project.client + ' • ' : ''}${project.year}`;
-    if (desc) desc.textContent = project.description;
-
-    // Badges de ferramentas
-    if (toolsUsed) {
-      toolsUsed.innerHTML = (project.tools || []).map(t => `<span class="tool-tag">${t}</span>`).join('');
-    }
-
-    // Link externo se existir
-    if (actionsGroup) {
-      if (project.link && project.link !== '#') {
-        actionsGroup.innerHTML = `
-          <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn-apple-secondary">
-            <span>Ver Online</span>
-            <i class="ph ph-arrow-up-right"></i>
-          </a>
-        `;
-      } else {
-        actionsGroup.innerHTML = '';
-      }
-    }
 
     // Renderiza a mídia no viewport
     if (viewport) {
@@ -689,7 +673,6 @@ const MediaModal = {
           viewport.innerHTML = `
             <iframe 
               src="${project.mediaUrl}" 
-              title="${project.title}" 
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
@@ -698,19 +681,19 @@ const MediaModal = {
         } else if (project.mediaUrl && project.mediaUrl.endsWith('.mp4')) {
           // Arquivo de vídeo MP4 local ou direto
           viewport.innerHTML = `
-            <video controls autoplay playsinline style="max-height: 65vh; width: 100%;">
+            <video controls autoplay playsinline style="max-height: 80vh; width: 100%; max-width: 100%; border-radius: var(--radius-md);">
               <source src="${project.mediaUrl}" type="video/mp4">
               Seu navegador não suporta reprodução de vídeo.
             </video>
           `;
         } else {
-          // Fallback para thumbnail com visualizador
-          viewport.innerHTML = `<img src="${project.thumbnail}" alt="${project.title}">`;
+          // Fallback para thumbnail
+          viewport.innerHTML = `<img src="${project.thumbnail}" alt="Visualização">`;
         }
       } else {
-        // Imagem HD
+        // Imagem ou Foto HD
         const imgUrl = project.mediaUrl || project.thumbnail;
-        viewport.innerHTML = `<img src="${imgUrl}" alt="${project.title}">`;
+        viewport.innerHTML = `<img src="${imgUrl}" alt="Visualização" style="max-height: 85vh; width: auto; max-width: 100%; object-fit: contain;">`;
       }
     }
 

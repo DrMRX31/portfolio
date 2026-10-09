@@ -182,146 +182,675 @@ const PORTFOLIO_DATA = {
   // - "image": URL de imagem em alta definição (JPG, PNG, WebP)
   // -------------------------------------------------------------
   projects: [
-    {
-      id: "lumina-cinematic-film",
-      title: "Lumina: A Essência do Movimento",
-      category: "video",
-      categoryLabel: "Vídeo Cinematográfico",
-      featured: true, // EXIBE NA HOME COMO DESTAQUE
-      featuredSize: "large", // "large" para card de destaque amplo no bento grid
-      year: "2025",
-      client: "Campanha Conceito",
-      description: "Filme comercial conceitual focado em texturas, iluminação dramática e contrastes dinâmicos. A produção explorou movimentos fluidos de câmera e uma colorimetria inspirada em filmes modernos de ficção científica.",
-      thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "video",
-      // Exemplo de vídeo embed de alta qualidade (pode ser trocado por seu vídeo do YouTube ou arquivo local .mp4)
-      mediaUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-      tools: ["Blackmagic RAW", "DaVinci Resolve", "Premiere Pro", "Sound Design 5.1"],
-      link: "#"
-    },
-    {
-      id: "aurora-editorial-photo",
-      title: "Editorial Urbano: Linhas & Sombras",
-      category: "foto",
-      categoryLabel: "Fotografia Editorial",
-      featured: true, // EXIBE NA HOME COMO DESTAQUE
-      featuredSize: "medium",
-      year: "2025",
-      client: "Coleção Urbana",
-      description: "Sessão fotográfica externa explorando a geometria da arquitetura metropolitana contemporânea em contraste com tons metálicos e iluminação dourada do entardecer.",
-      thumbnail: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "image",
-      mediaUrl: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1920&q=90",
-      tools: ["Sony A7 IV", "Lente 85mm f/1.4", "Lightroom CC", "Retoque High-End"],
-      link: "#"
-    },
-    {
-      id: "neo-branding-visuals",
-      title: "Identidade Tridimensional Neo",
-      category: "imagem",
-      categoryLabel: "Artes Visuais & 3D",
-      featured: true, // EXIBE NA HOME COMO DESTAQUE
-      featuredSize: "medium",
-      year: "2025",
-      client: "Tech Brand Rebrand",
-      description: "Composição de key visual e exploração tipográfica com materiais cromados, reflexos translúcidos inspirados no design industrial e atmosfera minimalista futurista.",
-      thumbnail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "image",
-      mediaUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=90",
-      tools: ["Cinema 4D", "Octane Render", "Photoshop", "Figma"],
-      link: "#"
-    },
-    {
-      id: "sound-pulse-clip",
-      title: "Ritmo & Frequência: Videoclipe Oficial",
-      category: "video",
-      categoryLabel: "Videoclipe & Pós-Produção",
-      featured: true, // EXIBE NA HOME COMO DESTAQUE
-      featuredSize: "wide",
-      year: "2024",
-      client: "Artista Musical Independente",
-      description: "Direção de pós-produção e efeitos visuais com transições sincronizadas no beat, cortes caleidoscópicos e tratamento de cor denso com tons prateados e azulados.",
-      thumbnail: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "video",
-      mediaUrl: "https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1",
-      tools: ["Premiere Pro", "After Effects", "Plugins BorisFX", "Sound Design"],
-      link: "#"
-    },
-    {
-      id: "studio-portrait-monochrome",
-      title: "Monocromático: Ensaio de Alta Fidelidade",
-      category: "foto",
-      categoryLabel: "Fotografia de Retrato",
-      featured: true, // EXIBE NA HOME
-      featuredSize: "medium",
-      year: "2024",
-      client: "Portfólio Pessoal",
-      description: "Estudo intimista em preto e branco explorando sombras profundas, texturas de pele autênticas e gradientes suaves de cinza e prata através de modificadores de luz dedicados.",
-      thumbnail: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "image",
-      mediaUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1920&q=90",
-      tools: ["Canon R5", "Profoto B10X", "Lightroom Classic", "Curvas Analógicas"],
-      link: "#"
-    },
-    {
-      id: "kinetic-motion-rebrand",
-      title: "Cinética Tipográfica & Motion System",
-      category: "imagem",
-      categoryLabel: "Design & Motion Graphics",
-      featured: false,
-      year: "2024",
-      client: "Plataforma de Streaming",
-      description: "Desenvolvimento de sistema de motion design responsivo para telões de evento e transmissões ao vivo. Foco em tipografia suíça animada e fluidez visual.",
-      thumbnail: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "image",
-      mediaUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1920&q=90",
-      tools: ["After Effects", "Illustrator", "Expressions JS"],
-      link: "#"
-    },
-    {
-      id: "documentary-short",
-      title: "Vozes do Ofício: Mini-Documentário",
-      category: "video",
-      categoryLabel: "Documentário & Reportagem",
-      featured: false,
-      year: "2024",
-      client: "Série Cultural",
-      description: "Captação documental em 4K retratando o trabalho de artesãos locais. Tratamento de áudio direto com foco em naturalidade vocal e trilha intimista acústica.",
-      thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "video",
-      mediaUrl: "https://www.youtube.com/embed/9bZkp7q19f0?autoplay=1",
-      tools: ["Sony FX3", "Microfones Sennheiser", "DaVinci Resolve 19"],
-      link: "#"
-    },
-    {
-      id: "macro-architecture-photo",
-      title: "Silhuetas & Geometria Espacial",
-      category: "foto",
-      categoryLabel: "Fotografia Arquitetônica",
-      featured: false,
-      year: "2024",
-      client: "Revista de Design",
-      description: "Registro de edifícios contemporâneos destacando padrões repetitivos, vidro refletivo e ângulos minimalistas com máxima nitidez de ponta a ponta.",
-      thumbnail: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "image",
-      mediaUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=90",
-      tools: ["Sony A7R V", "Lente Tilt-Shift 24mm", "Photoshop"],
-      link: "#"
-    },
-    {
-      id: "abstract-titanium-render",
-      title: "Metamorfose do Titânio: Arte Abstrata",
-      category: "imagem",
-      categoryLabel: "Concept Art & Render 3D",
-      featured: false,
-      year: "2024",
-      client: "Exploração Criativa",
-      description: "Experimento de iluminação cáustica e simulação de metais líquidos escovados com acabamento acetinado estilo titânio natural.",
-      thumbnail: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1200&q=80",
-      mediaType: "image",
-      mediaUrl: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1920&q=90",
-      tools: ["Blender Cycles", "Substance Designer", "Photoshop Camera Raw"],
-      link: "#"
-    }
-  ]
+  {
+    "id": "proj-vid-1",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/Caio_FHD_OK.mp4",
+    "thumbnail": "assets/videos/Caio_FHD_OK.mp4"
+  },
+  {
+    "id": "proj-vid-2",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/Externa1v2_1080x1920.mp4",
+    "thumbnail": "assets/videos/Externa1v2_1080x1920.mp4"
+  },
+  {
+    "id": "proj-vid-3",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/Externa2_1080x1920.mp4",
+    "thumbnail": "assets/videos/Externa2_1080x1920.mp4"
+  },
+  {
+    "id": "proj-vid-4",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/Interna1_1080x1920.mp4",
+    "thumbnail": "assets/videos/Interna1_1080x1920.mp4"
+  },
+  {
+    "id": "proj-vid-5",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/Interna2_1080x1920.mp4",
+    "thumbnail": "assets/videos/Interna2_1080x1920.mp4"
+  },
+  {
+    "id": "proj-vid-6",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/SAN1.mp4",
+    "thumbnail": "assets/videos/SAN1.mp4"
+  },
+  {
+    "id": "proj-vid-7",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/SAN2.mp4",
+    "thumbnail": "assets/videos/SAN2.mp4"
+  },
+  {
+    "id": "proj-vid-8",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": true,
+    "featuredSize": "large",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/fitreels.mp4",
+    "thumbnail": "assets/videos/fitreels.mp4"
+  },
+  {
+    "id": "proj-vid-9",
+    "category": "video",
+    "categoryLabel": "Vídeo",
+    "featured": true,
+    "featuredSize": "wide",
+    "mediaType": "video",
+    "mediaUrl": "assets/videos/prontoHD.mp4",
+    "thumbnail": "assets/videos/prontoHD.mp4"
+  },
+  {
+    "id": "proj-foto-10",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CAFE.png",
+    "thumbnail": "assets/photos/CAFE.png"
+  },
+  {
+    "id": "proj-foto-11",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR02454-Aprimorado-NR.jpg",
+    "thumbnail": "assets/photos/CHR02454-Aprimorado-NR.jpg"
+  },
+  {
+    "id": "proj-foto-12",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR02474-Aprimorado-NR.jpg",
+    "thumbnail": "assets/photos/CHR02474-Aprimorado-NR.jpg"
+  },
+  {
+    "id": "proj-foto-13",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR02568.jpg",
+    "thumbnail": "assets/photos/CHR02568.jpg"
+  },
+  {
+    "id": "proj-foto-14",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR02703.jpg",
+    "thumbnail": "assets/photos/CHR02703.jpg"
+  },
+  {
+    "id": "proj-foto-15",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": true,
+    "featuredSize": "large",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR02706.jpg",
+    "thumbnail": "assets/photos/CHR02706.jpg"
+  },
+  {
+    "id": "proj-foto-16",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR02774.jpg",
+    "thumbnail": "assets/photos/CHR02774.jpg"
+  },
+  {
+    "id": "proj-foto-17",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR03492-2.jpg",
+    "thumbnail": "assets/photos/CHR03492-2.jpg"
+  },
+  {
+    "id": "proj-foto-18",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR03599.jpg",
+    "thumbnail": "assets/photos/CHR03599.jpg"
+  },
+  {
+    "id": "proj-foto-19",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR04704.jpg",
+    "thumbnail": "assets/photos/CHR04704.jpg"
+  },
+  {
+    "id": "proj-foto-20",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR04732.jpg",
+    "thumbnail": "assets/photos/CHR04732.jpg"
+  },
+  {
+    "id": "proj-foto-21",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR04945.jpg",
+    "thumbnail": "assets/photos/CHR04945.jpg"
+  },
+  {
+    "id": "proj-foto-22",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR05925.jpg",
+    "thumbnail": "assets/photos/CHR05925.jpg"
+  },
+  {
+    "id": "proj-foto-23",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR05972.jpg",
+    "thumbnail": "assets/photos/CHR05972.jpg"
+  },
+  {
+    "id": "proj-foto-24",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR06072.jpg",
+    "thumbnail": "assets/photos/CHR06072.jpg"
+  },
+  {
+    "id": "proj-foto-25",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR06094.jpg",
+    "thumbnail": "assets/photos/CHR06094.jpg"
+  },
+  {
+    "id": "proj-foto-26",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR06351.jpg",
+    "thumbnail": "assets/photos/CHR06351.jpg"
+  },
+  {
+    "id": "proj-foto-27",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR06380.jpg",
+    "thumbnail": "assets/photos/CHR06380.jpg"
+  },
+  {
+    "id": "proj-foto-28",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR06389.jpg",
+    "thumbnail": "assets/photos/CHR06389.jpg"
+  },
+  {
+    "id": "proj-foto-29",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR08010.jpg",
+    "thumbnail": "assets/photos/CHR08010.jpg"
+  },
+  {
+    "id": "proj-foto-30",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR08013.jpg",
+    "thumbnail": "assets/photos/CHR08013.jpg"
+  },
+  {
+    "id": "proj-foto-31",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/CHR08042.jpg",
+    "thumbnail": "assets/photos/CHR08042.jpg"
+  },
+  {
+    "id": "proj-foto-32",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/DSC02104.jpg",
+    "thumbnail": "assets/photos/DSC02104.jpg"
+  },
+  {
+    "id": "proj-foto-33",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/IMG_9058.jpg",
+    "thumbnail": "assets/photos/IMG_9058.jpg"
+  },
+  {
+    "id": "proj-foto-34",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/IMG_9072.jpg",
+    "thumbnail": "assets/photos/IMG_9072.jpg"
+  },
+  {
+    "id": "proj-foto-35",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/IMG_9095.jpg",
+    "thumbnail": "assets/photos/IMG_9095.jpg"
+  },
+  {
+    "id": "proj-foto-36",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/IMG_9152.jpg",
+    "thumbnail": "assets/photos/IMG_9152.jpg"
+  },
+  {
+    "id": "proj-foto-37",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/IMG_9198.jpg",
+    "thumbnail": "assets/photos/IMG_9198.jpg"
+  },
+  {
+    "id": "proj-foto-38",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/IMG_9506.jpg",
+    "thumbnail": "assets/photos/IMG_9506.jpg"
+  },
+  {
+    "id": "proj-foto-39",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/SUCO_TORRADA.png",
+    "thumbnail": "assets/photos/SUCO_TORRADA.png"
+  },
+  {
+    "id": "proj-foto-40",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/almoco.png",
+    "thumbnail": "assets/photos/almoco.png"
+  },
+  {
+    "id": "proj-foto-41",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/banana_boleira.png",
+    "thumbnail": "assets/photos/banana_boleira.png"
+  },
+  {
+    "id": "proj-foto-42",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/bolobelgastoryu.png",
+    "thumbnail": "assets/photos/bolobelgastoryu.png"
+  },
+  {
+    "id": "proj-foto-43",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/bolocereja.png",
+    "thumbnail": "assets/photos/bolocereja.png"
+  },
+  {
+    "id": "proj-foto-44",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/bolostories.png",
+    "thumbnail": "assets/photos/bolostories.png"
+  },
+  {
+    "id": "proj-foto-45",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/mu.png",
+    "thumbnail": "assets/photos/mu.png"
+  },
+  {
+    "id": "proj-foto-46",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/prett.png",
+    "thumbnail": "assets/photos/prett.png"
+  },
+  {
+    "id": "proj-foto-47",
+    "category": "foto",
+    "categoryLabel": "Foto",
+    "featured": true,
+    "featuredSize": "large",
+    "mediaType": "image",
+    "mediaUrl": "assets/photos/them.png",
+    "thumbnail": "assets/photos/them.png"
+  },
+  {
+    "id": "proj-img-48",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/001-feed.jpg",
+    "thumbnail": "assets/images/001-feed.jpg"
+  },
+  {
+    "id": "proj-img-49",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/0010-stories.jpg",
+    "thumbnail": "assets/images/0010-stories.jpg"
+  },
+  {
+    "id": "proj-img-50",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/002-stories.jpg",
+    "thumbnail": "assets/images/002-stories.jpg"
+  },
+  {
+    "id": "proj-img-51",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/003-horizontal.jpg",
+    "thumbnail": "assets/images/003-horizontal.jpg"
+  },
+  {
+    "id": "proj-img-52",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/008-horizontal.jpg",
+    "thumbnail": "assets/images/008-horizontal.jpg"
+  },
+  {
+    "id": "proj-img-53",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/3.png",
+    "thumbnail": "assets/images/3.png"
+  },
+  {
+    "id": "proj-img-54",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/4.png",
+    "thumbnail": "assets/images/4.png"
+  },
+  {
+    "id": "proj-img-55",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/BELGASTORY.png",
+    "thumbnail": "assets/images/BELGASTORY.png"
+  },
+  {
+    "id": "proj-img-56",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/ESPACOBUSINESS.png",
+    "thumbnail": "assets/images/ESPACOBUSINESS.png"
+  },
+  {
+    "id": "proj-img-57",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/HOJESTORIES.png",
+    "thumbnail": "assets/images/HOJESTORIES.png"
+  },
+  {
+    "id": "proj-img-58",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/TORRADASTORY.png",
+    "thumbnail": "assets/images/TORRADASTORY.png"
+  },
+  {
+    "id": "proj-img-59",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/camarotes_ideia.png",
+    "thumbnail": "assets/images/camarotes_ideia.png"
+  },
+  {
+    "id": "proj-img-60",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/combotorradastory.png",
+    "thumbnail": "assets/images/combotorradastory.png"
+  },
+  {
+    "id": "proj-img-61",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": true,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/corpoealmastories.png",
+    "thumbnail": "assets/images/corpoealmastories.png"
+  },
+  {
+    "id": "proj-img-62",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/lukascamarote.png",
+    "thumbnail": "assets/images/lukascamarote.png"
+  },
+  {
+    "id": "proj-img-63",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/mrgymfitproducao.png",
+    "thumbnail": "assets/images/mrgymfitproducao.png"
+  },
+  {
+    "id": "proj-img-64",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/odc_5.png",
+    "thumbnail": "assets/images/odc_5.png"
+  },
+  {
+    "id": "proj-img-65",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/post_hashtag_gatilhos.png",
+    "thumbnail": "assets/images/post_hashtag_gatilhos.png"
+  },
+  {
+    "id": "proj-img-66",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/sopastory.png",
+    "thumbnail": "assets/images/sopastory.png"
+  },
+  {
+    "id": "proj-img-67",
+    "category": "imagem",
+    "categoryLabel": "Imagem",
+    "featured": false,
+    "featuredSize": "medium",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/zefelipecamarote.png",
+    "thumbnail": "assets/images/zefelipecamarote.png"
+  }
+]
 };

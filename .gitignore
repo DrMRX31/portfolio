@@ -1,0 +1,7 @@
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos que ultrapassam o limite de 100MB do GitHub
+# (Caio_FHD_OK.mp4 tem ~203MB. Caso queira usá-lo online, suba para o YouTube/Vimeo e use o link no site!)
+assets/videos/Caio_FHD_OK.mp4
