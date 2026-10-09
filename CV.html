@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo - Christian Ferrari</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 10mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #000000;
+      color: #eaeaea;
+      line-height: 1.45;
+      font-size: 10.5px;
+    }
+
+    .ambient {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 85%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                  #050505;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 195mm;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 14px 18px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    /* HEADER */
+    header.glass-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 22px;
+    }
+
+    .header-left h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    .header-left .role {
+      font-size: 12px;
+      font-weight: 500;
+      color: #a0a0a0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+      margin-bottom: 6px;
+    }
+
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 9px;
+      color: #cfcfcf;
+    }
+
+    .status-dot {
+      width: 5px;
+      height: 5px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #ffffff;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 9.5px;
+      color: #a0a0a0;
+      line-height: 1.5;
+    }
+
+    .header-right strong {
+      color: #ffffff;
+    }
+
+    /* TITULOS */
+    .section-title {
+      font-size: 10.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent);
+    }
+
+    /* BIO */
+    .bio-text {
+      color: #b0b0b0;
+      font-size: 10px;
+      line-height: 1.55;
+      text-align: justify;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 12px;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* EXPERIENCIA */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .item {
+      position: relative;
+      padding-left: 12px;
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .item::before {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: 4px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 0 6px #ffffff;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .item-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .item-year {
+      font-size: 9px;
+      color: #777777;
+      font-weight: 500;
+    }
+
+    .item-sub {
+      font-size: 9.5px;
+      color: #a5a5a5;
+      margin-bottom: 3px;
+    }
+
+    .item-desc {
+      font-size: 9px;
+      color: #8c8c8c;
+      line-height: 1.4;
+    }
+
+    /* SKILLS */
+    .skills-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .skill-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9px;
+      font-weight: 500;
+      color: #d0d0d0;
+    }
+
+    .skill-info span:last-child {
+      color: #808080;
+    }
+
+    .bar-bg {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #666, #fff);
+      border-radius: 99px;
+    }
+
+    /* TOOLS */
+    .tools-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .tool-tag {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      padding: 5px 8px;
+      border-radius: 7px;
+    }
+
+    .tool-title {
+      font-size: 9px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .tool-role {
+      font-size: 8px;
+      color: #7d7d7d;
+    }
+
+    /* SOFT SKILLS */
+    .soft-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .soft-item {
+      font-size: 9px;
+      color: #999;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 5px 8px;
+      border-radius: 6px;
+    }
+
+    .soft-item strong {
+      color: #e0e0e0;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient"></div>
+
+  <div class="container">
+    
+    <!-- HEADER -->
+    <header class="glass-card">
+      <div class="header-left">
+        <h1>Christian Ferrari</h1>
+        <div class="role">Produtor Multimídia</div>
+        <div class="status-tag">
+          <div class="status-dot"></div>
+          Disponível para novos projetos e produções
+        </div>
+      </div>
+      <div class="header-right">
+        <div><strong>Localização:</strong> Brasil</div>
+        <div><strong>WhatsApp:</strong> +55 (47) 99280-8271</div>
+        <div><strong>E-mail:</strong> christianferrari61@gmail.com</div>
+        <div><strong>Instagram:</strong> @cferraari_</div>
+      </div>
+    </header>
+
+    <!-- BIO -->
+    <section class="glass-card">
+      <div class="section-title">Perfil Executivo</div>
+      <p class="bio-text">
+        Com trajetória consolidada na produção publicitária e audiovisual iniciada aos 16 anos, desenvolvi sólido domínio técnico sobre as principais plataformas, fluxos de captação e ferramentas criativas do mercado. Atuando como freelancer especializado em redes sociais, produção audiovisual e fotografia de alto padrão, uno narrativa estratégica, ritmo dinâmico e estética refinada para transformar ideias em experiências visuais memoráveis e resultados expressivos para marcas e clientes.
+      </p>
+    </section>
+
+    <!-- GRID DUAS COLUNAS -->
+    <div class="grid">
+      
+      <!-- COLUNA ESQUERDA -->
+      <div class="col">
+        <section class="glass-card">
+          <div class="section-title">Trajetória Profissional</div>
+          <div class="timeline">
+            
+            <div class="item">
+              <div class="item-header">
+                <span class="item-title">Diretor de Arte e Fotografia</span>
+                <span class="item-year">2021</span>
+              </div>
+              <div class="item-sub">Hashtag Comunicação · Rio do Sul, SC</div>
+              <p class="item-desc">Liderança integral do processo criativo e visual da agência. Gestão executiva de projetos, direção de fotografia em estúdio/externa, confecção multimídia e concepção estética de campanhas de performance.</p>
+            </div>
+
+            <div class="item">
+              <div class="item-header">
+                <span class="item-title">Chefe de Divisão de Imprensa</span>
+                <span class="item-year">2020</span>
+              </div>
+              <div class="item-sub">Prefeitura de Rio do Sul · Rio do Sul, SC</div>
+              <p class="item-desc">Coordenação da produção de materiais publicitários, institucionais e coberturas audiovisuais oficiais. Planejamento de campanhas de utilidade pública e documentação de eventos oficiais.</p>
+            </div>
+
+            <div class="item">
+              <div class="item-header">
+                <span class="item-title">Produtor Multimídia</span>
+                <span class="item-year">2019</span>
+              </div>
+              <div class="item-sub">Reale Engenharia · Rio do Sul, SC</div>
+              <p class="item-desc">Captação, direção e edição técnica de materiais para cursos online, planejamento de conteúdo dinâmico para mídias sociais e estratégias audiovisuais para fortalecimento de marca.</p>
+            </div>
+
+            <div class="item">
+              <div class="item-header">
+                <span class="item-title">Produtor Comercial e Jornalístico</span>
+                <span class="item-year">2016</span>
+              </div>
+              <div class="item-sub">Rede Bela Aliança de Televisão (RBATV) · Rio do Sul, SC</div>
+              <p class="item-desc">Início na radiodifusão com edição ágil de matérias para telejornais diários e produção executiva de comerciais, controle técnico de exibição e programas da grade.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- FORMAÇÃO & IDIOMAS -->
+        <section class="glass-card">
+          <div class="section-title">Formação & Idiomas</div>
+          <div class="item" style="border: none; padding-left: 0;">
+            <div class="item-title">Produção Multimídia</div>
+            <div class="item-sub">UNIDAVI · Graduação Superior (Não finalizada)</div>
+            <p class="item-desc">Ênfase em direção criativa, processos de captação e edição audiovisual, fotografia publicitária, narrativas transmídia e design digital contemporâneo.</p>
+          </div>
+          <div style="margin-top: 8px; font-size: 9px; color: #aaa; display: flex; gap: 14px;">
+            <span><strong>Português:</strong> Nativo (Língua Materna)</span>
+            <span><strong>Inglês:</strong> B2 - Fluente (Comunicação Internacional)</span>
+          </div>
+        </section>
+      </div>
+
+      <!-- COLUNA DIREITA -->
+      <div class="col">
+        
+        <!-- COMPETÊNCIAS TÉCNICAS -->
+        <section class="glass-card">
+          <div class="section-title">Domínio Técnico</div>
+          <div class="skills-box">
+            <div class="skill-row">
+              <div class="skill-info"><span>Edição & Montagem Rítmica</span><span>95%</span></div>
+              <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-info"><span>Fotografia Publicitária & Retrato</span><span>92%</span></div>
+              <div class="bar-bg"><div class="bar-fill" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-info"><span>Color Grading (ACES/Rec.709)</span><span>90%</span></div>
+              <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-info"><span>Captação & Direção de Foto</span><span>88%</span></div>
+              <div class="bar-bg"><div class="bar-fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-info"><span>Design Visual & Identidade</span><span>86%</span></div>
+              <div class="bar-bg"><div class="bar-fill" style="width: 86%;"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-info"><span>Motion Graphics & VFX</span><span>85%</span></div>
+              <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-info"><span>Sound Design & Mixagem</span><span>82%</span></div>
+              <div class="bar-bg"><div class="bar-fill" style="width: 82%;"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FERRAMENTAS -->
+        <section class="glass-card">
+          <div class="section-title">Ferramentas & Softwares</div>
+          <div class="tools-wrap">
+            <div class="tool-tag">
+              <div class="tool-title">Photoshop</div>
+              <div class="tool-role">Especialista</div>
+            </div>
+            <div class="tool-tag">
+              <div class="tool-title">Lightroom</div>
+              <div class="tool-role">Especialista</div>
+            </div>
+            <div class="tool-tag">
+              <div class="tool-title">Premiere Pro</div>
+              <div class="tool-role">Avançado</div>
+            </div>
+            <div class="tool-tag">
+              <div class="tool-title">DaVinci Resolve</div>
+              <div class="tool-role">Avançado</div>
+            </div>
+            <div class="tool-tag">
+              <div class="tool-title">After Effects</div>
+              <div class="tool-role">Avançado</div>
+            </div>
+            <div class="tool-tag">
+              <div class="tool-title">Illustrator</div>
+              <div class="tool-role">Intermediário</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SOFT SKILLS -->
+        <section class="glass-card">
+          <div class="section-title">Habilidades Estratégicas</div>
+          <div class="soft-list">
+            <div class="soft-item"><strong>Comunicação Estratégica:</strong> Clareza em briefings e conceitos.</div>
+            <div class="soft-item"><strong>Criatividade & Visão:</strong> Soluções contemporâneas de vanguarda.</div>
+            <div class="soft-item"><strong>Liderança:</strong> Direção de set e controle técnico rigoroso.</div>
+            <div class="soft-item"><strong>Trabalho em Equipe:</strong> Alinhamento com agências e núcleos de arte.</div>
+            <div class="soft-item"><strong>Gestão de Prazos:</strong> Rigor em entregas e gestão de acervo.</div>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
