@@ -115,9 +115,9 @@ const SpotlightEffect = {
         const xPct = Math.round((e.clientX / window.innerWidth) * 100);
         const yPct = Math.round((e.clientY / window.innerHeight) * 100);
         ambientGlow.style.background = `
-          radial-gradient(circle at ${xPct}% ${yPct}%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
-          radial-gradient(circle at 80% 20%, rgba(180, 190, 210, 0.03) 0%, transparent 40%),
-          radial-gradient(circle at 20% 80%, rgba(140, 150, 180, 0.02) 0%, transparent 50%)
+          radial-gradient(circle at ${xPct}% ${yPct}%, rgba(255, 255, 255, 0.75) 0%, transparent 60%),
+          radial-gradient(circle at 80% 20%, rgba(215, 224, 236, 0.45) 0%, transparent 40%),
+          radial-gradient(circle at 20% 80%, rgba(200, 210, 225, 0.35) 0%, transparent 50%)
         `;
       });
     }
