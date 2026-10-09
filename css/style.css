@@ -8,35 +8,35 @@
    1. VARIÁVEIS DO SISTEMA DE DESIGN & PALETA DE CORES
    -------------------------------------------------------------------------- */
 :root {
-  /* Tons Principais: Gradiente entre Branco Gelo e Cinza Prateado */
-  --bg-gradient: linear-gradient(145deg, #f8f9fb 0%, #edf0f5 45%, #dfe3eb 100%);
-  --bg-surface: rgba(255, 255, 255, 0.82);
-  --bg-surface-elevated: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.72);
-  --bg-card-hover: rgba(255, 255, 255, 0.92);
+  /* Tons Principais: Gradiente entre Prata Claro e Cinza Médio Metalizado */
+  --bg-gradient: linear-gradient(135deg, #cfd4df 0%, #b8becb 35%, #9ea6b6 75%, #8a92a3 100%);
+  --bg-surface: rgba(255, 255, 255, 0.55);
+  --bg-surface-elevated: rgba(255, 255, 255, 0.75);
+  --bg-card: rgba(245, 248, 255, 0.42);
+  --bg-card-hover: rgba(255, 255, 255, 0.62);
 
-  /* Tipografia: Tons de Chumbo, Titânio e Grafite */
-  --silver-white: #0f172a;       /* Título com contraste e nitidez */
+  /* Tipografia: Alto Contraste e Legibilidade Suave */
+  --silver-white: #090d16;       /* Título com definição e nitidez */
   --silver-light: #1e293b;       /* Texto base */
-  --silver-mid: #475569;         /* Subtextos e descrições */
-  --silver-dark: #64748b;        /* Rótulos e metadados */
-  --silver-deep: #94a3b8;        /* Linhas e separadores */
+  --silver-mid: #334155;         /* Subtextos e descrições */
+  --silver-dark: #475569;        /* Rótulos e metadados */
+  --silver-deep: #64748b;        /* Linhas e separadores */
 
-  /* Efeitos de Luz & Bordas de Vidro */
-  --border-glass: rgba(255, 255, 255, 0.85);
-  --border-glass-hover: rgba(203, 213, 225, 0.95);
-  --border-glass-active: rgba(148, 163, 184, 0.8);
-  --glass-specular: rgba(255, 255, 255, 0.95);
+  /* Efeitos de Luz & Bordas de Vidro Líquido Apple */
+  --border-glass: rgba(255, 255, 255, 0.65);
+  --border-glass-hover: rgba(255, 255, 255, 0.95);
+  --border-glass-active: rgba(255, 255, 255, 1);
+  --glass-specular: rgba(255, 255, 255, 0.9);
 
-  /* Sombras & Blur Apple */
-  --glass-blur: blur(28px) saturate(190%);
-  --shadow-subtle: 0 10px 25px -8px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.03);
-  --shadow-elevated: 0 20px 45px -12px rgba(15, 23, 42, 0.12), 0 4px 16px rgba(15, 23, 42, 0.05);
-  --shadow-spotlight: 0 0 45px rgba(255, 255, 255, 0.9);
+  /* Sombras & Blur Apple Profundo (Frosted Glass) */
+  --glass-blur: blur(28px) saturate(210%);
+  --shadow-subtle: 0 14px 34px -10px rgba(15, 23, 42, 0.14), inset 0 1px 2px rgba(255, 255, 255, 0.85);
+  --shadow-elevated: 0 24px 50px -12px rgba(15, 23, 42, 0.2), inset 0 1px 3px rgba(255, 255, 255, 0.95);
+  --shadow-spotlight: 0 0 50px rgba(255, 255, 255, 0.85);
 
   /* Cores de Acento */
   --accent-silver: linear-gradient(135deg, #0f172a 0%, #334155 50%, #64748b 100%);
-  --accent-glow: rgba(255, 255, 255, 0.8);
+  --accent-glow: rgba(255, 255, 255, 0.85);
   --accent-dot: #10b981; /* Indicador verde esmeralda */
 
   /* Tipografia & Medidas */
@@ -66,7 +66,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  background: #edf0f5;
+  background: #b8becb;
   color: var(--silver-light);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -79,7 +79,7 @@ body {
   position: relative;
   overflow-x: hidden;
   line-height: 1.6;
-  background: linear-gradient(145deg, #f8f9fb 0%, #edf0f5 40%, #dfe3eb 100%);
+  background: linear-gradient(135deg, #cfd4df 0%, #b8becb 35%, #9ea6b6 75%, #8a92a3 100%);
   background-attachment: fixed;
   color: var(--silver-light);
 }
@@ -113,9 +113,9 @@ a {
   pointer-events: none;
   z-index: 0;
   background: 
-    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.75) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(215, 224, 236, 0.45) 0%, transparent 40%),
-    radial-gradient(circle at 20% 80%, rgba(200, 210, 225, 0.35) 0%, transparent 50%);
+    radial-gradient(circle at 45% 15%, rgba(255, 255, 255, 0.45) 0%, transparent 60%),
+    radial-gradient(circle at 85% 30%, rgba(200, 210, 225, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 15% 80%, rgba(160, 172, 192, 0.3) 0%, transparent 50%);
   transition: background 0.4s ease;
 }
 
@@ -124,11 +124,11 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(rgba(148, 163, 184, 0.18) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.28) 1.2px, transparent 1.2px);
   background-size: 32px 32px;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.65;
+  opacity: 0.75;
 }
 
 /* --------------------------------------------------------------------------
@@ -152,6 +152,7 @@ body::before {
 .glass-card:hover {
   border-color: var(--border-glass-hover);
   background-color: var(--bg-card-hover);
+  box-shadow: var(--shadow-elevated);
 }
 
 /* Efeito Spotlight Dinâmico: feixe de luz que segue o cursor */
@@ -165,7 +166,7 @@ body::before {
   inset: 0;
   background: radial-gradient(
     550px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.7),
     transparent 55%
   );
   opacity: 0;
@@ -187,7 +188,7 @@ body::before {
   padding: 1px;
   background: radial-gradient(
     380px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(148, 163, 184, 0.7),
+    rgba(255, 255, 255, 0.95),
     transparent 45%
   );
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -210,15 +211,15 @@ body::before {
   gap: 8px;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.48);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.9);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--silver-mid);
+  color: var(--silver-white);
 }
 
 .glass-button {
@@ -226,22 +227,23 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(203, 213, 225, 0.8);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-pill);
   cursor: pointer;
-  color: var(--silver-light);
+  color: var(--silver-white);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), inset 0 1px 2px rgba(255, 255, 255, 0.85);
   transition: all var(--transition-fast);
 }
 
 .glass-button:hover {
-  background: #ffffff;
-  border-color: var(--border-glass-hover);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.95);
   color: var(--silver-white);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12), inset 0 1px 2px rgba(255, 255, 255, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -255,7 +257,7 @@ h1, h2, h3, h4 {
 }
 
 .text-gradient-silver {
-  background: linear-gradient(135deg, #0f172a 0%, #334155 45%, #64748b 100%);
+  background: linear-gradient(135deg, #090d16 0%, #1e293b 45%, #475569 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -292,9 +294,11 @@ h1, h2, h3, h4 {
   max-width: 960px;
   padding: 10px 18px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.03);
+  background: rgba(235, 240, 250, 0.48);
+  backdrop-filter: blur(32px) saturate(210%);
+  -webkit-backdrop-filter: blur(32px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 16px 38px -10px rgba(15, 23, 42, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .nav-logo {
@@ -469,8 +473,8 @@ h1, h2, h3, h4 {
   justify-content: center;
   gap: 10px;
   padding: 12px 26px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(203, 213, 225, 0.85);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.75);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   color: var(--silver-white);
@@ -478,15 +482,15 @@ h1, h2, h3, h4 {
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.85);
   transition: all var(--transition-fast);
 }
 
 .btn-apple-secondary:hover {
-  background: #ffffff;
-  border-color: #94a3b8;
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.95);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.14), inset 0 1px 2px rgba(255, 255, 255, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -833,9 +837,11 @@ h1, h2, h3, h4 {
   padding: 6px;
   border-radius: var(--radius-pill);
   margin-bottom: 28px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+  background: rgba(235, 240, 250, 0.48);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 
 .filter-pill {
@@ -1850,11 +1856,13 @@ h1, h2, h3, h4 {
    14. FOOTER APPLE MINIMALISTA
    -------------------------------------------------------------------------- */
 .site-footer {
-  border-top: 1px solid rgba(203, 213, 225, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
   padding: 60px 0 40px;
   position: relative;
   z-index: 2;
-  background: rgba(241, 245, 249, 0.6);
+  background: rgba(184, 190, 203, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .footer-top {
